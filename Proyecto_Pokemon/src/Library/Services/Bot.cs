@@ -35,6 +35,7 @@ public class Bot : IBot
 
         client = new DiscordSocketClient(config);
         commands = new CommandService();
+        ///client.Ready += SendInitialMessageAsync;
 
 
     }
@@ -53,7 +54,6 @@ public class Bot : IBot
         await client.StartAsync();
 
         client.MessageReceived += HandleCommandAsync;
-        client.Ready += OnReadyAsync;
 
     }
 
@@ -83,46 +83,20 @@ public class Bot : IBot
 
         }
     }
+}
 
 
-    private async Task OnReadyAsync()
-    {
-            // Toma el primer servidor (guild) donde esté el bot
-            var guild = client.Guilds.FirstOrDefault();
-            if (guild != null)
-            {
-                // Toma el primer canal de texto accesible
-                var channel = guild.TextChannels.FirstOrDefault();
-                if (channel != null)
-                {
-                    await channel.SendMessageAsync("¡Hola! El bot ha iniciado correctamente 🎉.");
-                    logger.LogInformation("Mensaje enviado al canal {ChannelName} en el servidor {GuildName}.",
-                        channel.Name, guild.Name);
-                }
-                else
-                {
-                    logger.LogWarning("No se encontró un canal de texto accesible en el servidor {GuildName}.",
-                        guild.Name);
-                }
-            }
-            else
-            {
-                logger.LogWarning("El bot no está en ningún servidor.");
-            }
-        }
-    }
-
-
-///private async Task OnReadyAsync()
+/// private async Task SendInitialMessageAsync()
     ///{
-    /// channel.SendMessageAsync("¡Hola a todos! El bot ha iniciado correctamente 🎉.");
-      ///  logger.LogInformation("¡El bot ha iniciado correctamente y está listo para operar! 🎉");
-       /// await Task.CompletedTask;
+       /// var guilds = client.Guilds; // Obtener todos los servidores a los que pertenece el bot
+        ///foreach (var guild in guilds)
+        ///{
+           /// var channel = guild.TextChannels.FirstOrDefault(); // Seleccionamos el primer canal de texto
+            ///var defaultChannel = guild.DefaultChannel; // Canal predeterminado
+            ///if (channel != null)
+            ///{
+               /// await channel.SendMessageAsync("¡Hola! El bot está en línea y listo para usarse. 🎉");
+            ///}
+        ///}
     ///}
-///}
-
-///private async Task OnReadyAsync()
-///{
-///logger.LogInformation("El bot está listo para operar.");
-///Console.WriteLine("El bot se ha iniciado correctamente.");
 ///}
