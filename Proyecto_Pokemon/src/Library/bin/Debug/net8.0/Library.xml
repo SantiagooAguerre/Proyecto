@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Library</name>
+    </assembly>
+    <members>
+        <member name="T:Proyecto_Pokemon.OpcionesCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Proyecto_Pokemon.TurnoCommand">
+            <summary>
+            Esta clase implementa el comando 'checkturn' del bot.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Pokemon.TurnoCommand.ExecuteAsync">
+            <summary>
+            Devuelve de quien es el turno.
+            </summary>
+        </member>
+        <member name="T:Proyecto_Pokemon.UsarMochilaCommand">
+            <summary>
+            Esta clase implementa el comando 'use' del bot.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Pokemon.UsarMochilaCommand.ExecuteAsync(System.String)">
+            <summary>
+            Envía a la fachada un mensaje con el item a usar y el Pokemons que se verá beneficiado.
+            </summary>
+            <param name="itemAndPokemonName">Nombre de Pokemon a ser beneficiado y del item a utilizar concatenados.</param>
+        </member>
+        <member name="T:Proyecto_Pokemon.VerMochilaCommand">
+            <summary>
+            Esta clase implementa el comando 'showitems' del bot.
+            </summary>
+        </member>
+        <member name="M:Proyecto_Pokemon.VerMochilaCommand.ExecuteAsync">
+            <summary>
+            Muestra los items disponibles del jugador.
+            </summary>
+        </member>
+        <member name="T:Library.Commands.AtaquesCommand">
+            <summary>
+            Esta clase implementa el comando 'showattacks' del bot.
+            </summary>
+        </member>
+        <member name="M:Library.Commands.AtaquesCommand.ExecuteAsync">
+            <summary>
+            Muestra los ataques disponibles del Pokemon activo del jugador.
+            </summary>
+        </member>
+        <member name="T:Ucu.Poo.DiscordBot.Services.Bot">
+            <summary>
+            Esta clase implementa el bot de Discord.
+            </summary>
+        </member>
+        <member name="T:Ucu.Poo.DiscordBot.Services.BotLoader">
+            <summary>
+            Esta clase ejecuta el bot de Discord hasta que en la terminal donde se
+            ejecuta el bot se oprime la tecla 'Q'.
+            </summary>
+        </member>
+        <member name="T:Ucu.Poo.DiscordBot.Services.IBot">
+            <summary>
+            La interfaz del Bot de Discord para usar con inyección de dependencias.
+            </summary>
+        </member>
+    </members>
+</doc>
