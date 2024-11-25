@@ -2153,19 +2153,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Estudiante UCU\\.nuget\\packages\\": {}
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Estudiante UCU\\Documents\\ProgramacionII\\Proyecto\\Proyecto_Pokemon\\src\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ProgramacionII\\Proyecto\\Proyecto_Pokemon\\src\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\Estudiante UCU\\Documents\\ProgramacionII\\Proyecto\\Proyecto_Pokemon\\src\\Library\\Library.csproj",
-      "packagesPath": "C:\\Users\\Estudiante UCU\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Estudiante UCU\\Documents\\ProgramacionII\\Proyecto\\Proyecto_Pokemon\\src\\Library\\obj\\",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\ProgramacionII\\Proyecto\\Proyecto_Pokemon\\src\\Library\\Library.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\ProgramacionII\\Proyecto\\Proyecto_Pokemon\\src\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Estudiante UCU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

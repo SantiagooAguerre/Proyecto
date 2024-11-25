@@ -271,7 +271,7 @@ public static class Fachada
             
             if (choosenPokemon.Vida == 0)
             {
-                return $"{nombreEntrenador}, tu pokemon actuall está fuera de combate. Cambie de pokemon.";
+                return $"{nombreEntrenador}, tu pokemon actual está fuera de combate. Cambie de pokemon.";
             }
 
             string final = batalla.CambiarPokemon(choosenPokemon);
