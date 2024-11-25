@@ -26,7 +26,7 @@ public class HelpComandos : ModuleBase<SocketCommandContext>
             "**!verMochila**:  Muestra los items disponibles del jugador.",
             "**!verVida**:  Saca al usuario del Lobby.",
         };
-        string response = "Lista de comandos disponibles:\n" + string.Join("\n", commands);
+        string response = "**Lista de comandos disponibles**:\n" + string.Join("\n", commands) + "\n" ;
 
         await ReplyAsync(response);
     }
