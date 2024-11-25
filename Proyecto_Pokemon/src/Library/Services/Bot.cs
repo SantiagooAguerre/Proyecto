@@ -27,16 +27,16 @@ public class Bot : IBot
         DiscordSocketConfig config = new()
         {
             AlwaysDownloadUsers = true,
-            GatewayIntents = 
+            GatewayIntents =
                 GatewayIntents.AllUnprivileged
-                | GatewayIntents.MessageContent/*
+                | GatewayIntents.MessageContent /*
                 | GatewayIntents.GuildMembers*/
         };
 
         client = new DiscordSocketClient(config);
         commands = new CommandService();
-        
-        client.JoinedGuild += OnBotJoinedGuildAsync;
+
+        client.Ready += OnReadyAsync;
 
     }
 
@@ -45,7 +45,7 @@ public class Bot : IBot
         string discordToken = configuration["DiscordToken"] ?? throw new Exception("Falta el token");
 
         logger.LogInformation("Iniciando el con token {Token}", discordToken);
-        
+
         serviceProvider = services;
 
         await commands.AddModulesAsync(Assembly.GetExecutingAssembly(), serviceProvider);
@@ -79,20 +79,43 @@ public class Bot : IBot
                 new SocketCommandContext(client, message),
                 position,
                 serviceProvider);
+
         }
     }
 
-    private async Task OnBotJoinedGuildAsync(SocketGuild guild)
-    {
-        var defaultChannel = guild.DefaultChannel;
 
-        if (defaultChannel != null)
+    private async Task OnReadyAsync()
+    {
+        // Busca el primer servidor y un canal de texto accesible
+        var guild = client.Guilds.FirstOrDefault();
+        if (guild != null)
         {
-            await defaultChannel.SendMessageAsync("¡Hola a todos! 👋 ¡Gracias por invitarme al servidor! Estoy aquí para ayudar.");
+            var channel = guild.TextChannels
+                .FirstOrDefault();
+
+            if (channel != null)
+            {
+                await channel.SendMessageAsync("¡Hola a todos! El bot ha iniciado correctamente 🎉.");
+                logger.LogInformation("Mensaje enviado al canal {ChannelName} en el servidor {GuildName}.",
+                    channel.Name, guild.Name);
+            }
+            else
+            {
+                logger.LogWarning("No se encontraron canales accesibles en el servidor {GuildName}.", guild.Name);
+            }
         }
         else
         {
-            logger.LogWarning("No se encontró un canal predeterminado en el servidor {GuildName}.", guild.Name);
+            logger.LogWarning("El bot no está en ningún servidor.");
         }
     }
 }
+
+///private async Task OnReadyAsync()
+    ///{
+    /// channel.SendMessageAsync("¡Hola a todos! El bot ha iniciado correctamente 🎉.");
+      ///  logger.LogInformation("¡El bot ha iniciado correctamente y está listo para operar! 🎉");
+       /// await Task.CompletedTask;
+    ///}
+///}
+
