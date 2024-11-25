@@ -40,3 +40,17 @@ C:\Users\Estudiante UCU\El_Verdadero_Team\Proyecto_Pokemon\src\Library\obj\Debug
 C:\Users\Estudiante UCU\El_Verdadero_Team\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\refint\Library.dll
 C:\Users\Estudiante UCU\El_Verdadero_Team\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.pdb
 C:\Users\Estudiante UCU\El_Verdadero_Team\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\ref\Library.dll
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\bin\Debug\net8.0\Library.deps.json
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\bin\Debug\net8.0\Library.dll
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\bin\Debug\net8.0\Library.pdb
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\bin\Debug\net8.0\Library.xml
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.sourcelink.json
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.dll
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\refint\Library.dll
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\Library.pdb
+C:\Users\Lenovo\Desktop\ProgramacionII\Proyecto\Proyecto_Pokemon\src\Library\obj\Debug\net8.0\ref\Library.dll
