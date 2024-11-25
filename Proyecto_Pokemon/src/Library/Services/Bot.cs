@@ -35,6 +35,9 @@ public class Bot : IBot
 
         client = new DiscordSocketClient(config);
         commands = new CommandService();
+        
+        client.JoinedGuild += OnBotJoinedGuildAsync;
+
     }
 
     public async Task StartAsync(ServiceProvider services)
@@ -66,7 +69,7 @@ public class Bot : IBot
         {
             return;
         }
-        
+
         int position = 0;
         bool messageIsCommand = message.HasCharPrefix('!', ref position);
 
@@ -76,6 +79,20 @@ public class Bot : IBot
                 new SocketCommandContext(client, message),
                 position,
                 serviceProvider);
+        }
+    }
+
+    private async Task OnBotJoinedGuildAsync(SocketGuild guild)
+    {
+        var defaultChannel = guild.DefaultChannel;
+
+        if (defaultChannel != null)
+        {
+            await defaultChannel.SendMessageAsync("¡Hola a todos! 👋 ¡Gracias por invitarme al servidor! Estoy aquí para ayudar.");
+        }
+        else
+        {
+            logger.LogWarning("No se encontró un canal predeterminado en el servidor {GuildName}.", guild.Name);
         }
     }
 }
